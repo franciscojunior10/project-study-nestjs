@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { PrismaService } from './database/prisma.service';
 import { PersonRepository } from './repositories/person-repository';
 import { PrismaMembersRepository } from './repositories/prisma/prisma-person-members-repository';
+import { LoggerModule } from '@mpgxc/logger';
 
 @Module({
-  imports: [],
+  imports: [LoggerModule.forRoot()],
   controllers: [AppController],
   providers: [
     PrismaService,
